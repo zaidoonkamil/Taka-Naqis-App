@@ -49,5 +49,8 @@
 	<key>NSPhotoLibraryUsageDescription</key>
     <string>يحتاج التطبيق الوصول إلى مكتبة الصور لاختيار الصور وإضافتها داخل التطبيق.</string>
 
+    <key>NSLocationWhenInUseUsageDescription</key>
+    <string>لن نستخدم موقعك. هذا الإذن مطلوب فقط لدعم مكتبات الإشعارات.</string>
+
 </dict>
 </plist>
