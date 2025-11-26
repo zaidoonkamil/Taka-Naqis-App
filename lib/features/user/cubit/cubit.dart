@@ -1,6 +1,8 @@
 import 'dart:async';
 
 import 'package:dio/dio.dart';
+import 'package:taka_naqis/core/%20navigation/navigation.dart';
+import 'package:taka_naqis/core/navigation_bar/navigation_bar.dart';
 import 'package:taka_naqis/core/widgets/show_toast.dart';
 import 'package:taka_naqis/features/user/cubit/states.dart';
 import 'package:taka_naqis/features/user/model/CatModel.dart';
@@ -143,6 +145,27 @@ class UserCubit extends Cubit<UserStates> {
       }
     });
   }
+
+  void deleteAccount({required BuildContext context,}) {
+    emit(DeleteProfileLoadingState());
+    DioHelper.deleteData(
+        url: '/users/$id',
+    ).then((value) {
+      token='';
+      emit(DeleteProfileSuccessState());
+      navigateAndFinish(context, BottomNavBar());
+    }).catchError((error) {
+      if (error is DioError) {
+        showToastError(text: error.toString(),
+          context: context,);
+        print(error.toString());
+        emit(DeleteProfileErrorState());
+      }else {
+        print("Unknown Error: $error");
+      }
+    });
+  }
+
 
   ScrollController scrollControllerCatt = ScrollController();
   double scrollPosition = 0.0;

@@ -353,10 +353,92 @@ class Profile extends StatelessWidget {
                             ),
                           ),
                         ),
-                        token ==''?Container():GestureDetector(
+                        token ==''?Container(): adminOrUser == 'admin'?Container():
+                        GestureDetector(
                           onTap: () async {
-                            showToastInfo(text: 'تم تقديم طلب حذف الحساب', context: context);
-                          },
+                            showDialog(
+                              context: context,
+                              barrierDismissible: false,
+                              builder: (context) {
+                                return Dialog(
+                                  backgroundColor: Colors.white,
+                                  shape: RoundedRectangleBorder(
+                                    borderRadius: BorderRadius.circular(18),
+                                  ),
+                                  child: Padding(
+                                    padding: const EdgeInsets.all(20.0),
+                                    child: Column(
+                                      mainAxisSize: MainAxisSize.min,
+                                      crossAxisAlignment: CrossAxisAlignment.center,
+                                      children: [
+                                        Icon(
+                                          Icons.warning_rounded,
+                                          size: 60,
+                                          color: Colors.redAccent,
+                                        ),
+                                        Text(
+                                          "حذف الحساب",
+                                          style: TextStyle(
+                                            fontSize: 20,
+                                            fontWeight: FontWeight.bold,
+                                            color: Colors.redAccent,
+                                          ),
+                                        ),
+                                        SizedBox(height: 10),
+                                        Text(
+                                          "هل أنت متأكد أنك تريد حذف حسابك بشكل نهائي؟\n"
+                                              "لن تتمكن من التراجع عن هذا الإجراء، وسيتم حذف جميع بياناتك المرتبطة بالحساب.",
+                                          textAlign: TextAlign.center,
+                                          style: TextStyle(
+                                            fontSize: 14,
+                                            color: Colors.black87,
+                                            height: 1.4,
+                                          ),
+                                        ),
+                                        SizedBox(height: 25),
+                                        Row(
+                                          children: [
+                                            Expanded(
+                                              child: ElevatedButton(
+                                                onPressed: () {
+                                                  Navigator.pop(context);
+                                                },
+                                                style: ElevatedButton.styleFrom(
+                                                  backgroundColor: Colors.grey.shade300,
+                                                  foregroundColor: Colors.black,
+                                                  padding: EdgeInsets.symmetric(vertical: 12),
+                                                  shape: RoundedRectangleBorder(
+                                                    borderRadius: BorderRadius.circular(10),
+                                                  ),
+                                                ),
+                                                child: Text("إلغاء"),
+                                              ),
+                                            ),
+                                            SizedBox(width: 10),
+                                            Expanded(
+                                              child: ElevatedButton(
+                                                onPressed: () {
+                                                  cubit.deleteAccount(context: context);
+                                                },
+                                                style: ElevatedButton.styleFrom(
+                                                  backgroundColor: Colors.redAccent,
+                                                  foregroundColor: Colors.white,
+                                                  padding: EdgeInsets.symmetric(vertical: 12),
+                                                  shape: RoundedRectangleBorder(
+                                                    borderRadius: BorderRadius.circular(10),
+                                                  ),
+                                                ),
+                                                child: Text("حذف نهائي"),
+                                              ),
+                                            ),
+                                          ],
+                                        )
+                                      ],
+                                    ),
+                                  ),
+                                );
+                              },
+                            );                          },
                           child: Container(
                             padding: EdgeInsets.all(8),
                             margin: EdgeInsets.symmetric(horizontal: 16,vertical: 4),

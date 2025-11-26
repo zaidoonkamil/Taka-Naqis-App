@@ -33,6 +33,10 @@ class GetProfileLoadingState extends UserStates {}
 class GetProfileSuccessState extends UserStates {}
 class GetProfileErrorState extends UserStates {}
 
+class DeleteProfileLoadingState extends UserStates {}
+class DeleteProfileSuccessState extends UserStates {}
+class DeleteProfileErrorState extends UserStates {}
+
 class GetBasketLoadingState extends UserStates {}
 class GetBasketSuccessState extends UserStates {}
 class GetBasketErrorState extends UserStates {}
