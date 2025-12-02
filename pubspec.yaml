@@ -41,6 +41,7 @@ dependencies:
   flutter_animate: ^4.3.0
   awesome_snackbar_content: ^0.1.5
   iconsax: ^0.0.8
+  sign_in_with_apple: ^7.0.1
 
 
 dev_dependencies:

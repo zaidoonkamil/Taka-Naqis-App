@@ -1,4 +1,5 @@
 import 'package:conditional_builder_null_safety/conditional_builder_null_safety.dart';
+import 'package:sign_in_with_apple/sign_in_with_apple.dart';
 import 'package:taka_naqis/core/widgets/background.dart';
 import 'package:taka_naqis/core/widgets/show_toast.dart';
 import 'package:taka_naqis/features/auth/view/loginCode.dart';
@@ -185,6 +186,17 @@ class Login extends StatelessWidget {
                               );
                             },
                           fallback: (c)=> CircularProgressIndicator(color: primaryColor,),
+                        ),
+                        const SizedBox(height: 20),
+                        SignInWithAppleButton(
+                          borderRadius:  BorderRadius.circular(12),
+                          style: SignInWithAppleButtonStyle.black,
+                          onPressed: () {
+                            showToastInfo(
+                              text: "ميزة تسجيل الدخول عبر Apple ستكون متاحة قريباً",
+                              context: context,
+                            );
+                          },
                         ),
                         const SizedBox(height: 20),
                         Row(

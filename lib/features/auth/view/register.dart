@@ -1,6 +1,7 @@
 import 'package:conditional_builder_null_safety/conditional_builder_null_safety.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:sign_in_with_apple/sign_in_with_apple.dart';
 
 import '../../../core/ navigation/navigation.dart';
 import '../../../core/styles/themes.dart';
@@ -232,6 +233,17 @@ class Register extends StatelessWidget {
                               );
                             },
                           fallback: (c)=> CircularProgressIndicator(color: primaryColor,),
+                        ),
+                        SizedBox(height: 20),
+                        SignInWithAppleButton(
+                          borderRadius:  BorderRadius.circular(12),
+                          style: SignInWithAppleButtonStyle.black,
+                          onPressed: () {
+                            showToastInfo(
+                              text: "ميزة تسجيل الدخول عبر Apple ستكون متاحة قريباً",
+                              context: context,
+                            );
+                          },
                         ),
                         const SizedBox(height: 20),
                         Row(

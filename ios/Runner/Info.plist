@@ -56,5 +56,14 @@
     <key>NSLocationWhenInUseUsageDescription</key>
     <string>لن نستخدم موقعك. هذا الإذن مطلوب فقط لدعم مكتبات الإشعارات.</string>
 
+    <dict>
+        <key>CFBundleName</key>
+        <string>Runner</string>
+
+        <key>UIRequiresFullScreen</key>
+        <true/>
+
+    </dict>
+
 </dict>
 </plist>
