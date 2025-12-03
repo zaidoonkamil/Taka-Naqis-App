@@ -29,7 +29,33 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       theme: ThemeService().lightTheme,
-      home: SplashScreen(),
+      home: LayoutBuilder(
+        builder: (context, constraints) {
+          final shortestSide = MediaQuery.of(context).size.shortestSide;
+
+          if (shortestSide > 600) {
+            return Scaffold(
+              body: Center(
+                child: Padding(
+                  padding: EdgeInsets.all(24),
+                  child: Text(
+                    "🛑 This app is designed for iPhones only.\nPlease use an iPhone to open the app.",
+                    textAlign: TextAlign.center,
+                    style: TextStyle(
+                      fontSize: 20,
+                      fontWeight: FontWeight.bold,
+                      color: Colors.redAccent,
+                    ),
+                  ),
+                ),
+              ),
+            );
+          }
+
+          return SplashScreen();
+        },
+      ),
     );
   }
 }
+
