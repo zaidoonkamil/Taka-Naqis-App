@@ -1,79 +1,73 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
-    <dict>
-        <key>UIDeviceFamily</key>
-        <array>
-            <integer>1</integer>
-        </array>
+<dict>
 
-        <key>CFBundleDevelopmentRegion</key>
-        <string>$(DEVELOPMENT_LANGUAGE)</string>
+    <key>UIDeviceFamily</key>
+    <array>
+        <integer>1</integer>
+    </array>
 
-        <key>CFBundleDisplayName</key>
-        <string>طكة ناقص</string>
+    <key>CFBundleDevelopmentRegion</key>
+    <string>$(DEVELOPMENT_LANGUAGE)</string>
 
-        <key>CFBundleExecutable</key>
-        <string>$(EXECUTABLE_NAME)</string>
+    <key>CFBundleDisplayName</key>
+    <string>طكة ناقص</string>
 
-        <key>CFBundleIdentifier</key>
-        <string>$(PRODUCT_BUNDLE_IDENTIFIER)</string>
+    <key>CFBundleExecutable</key>
+    <string>$(EXECUTABLE_NAME)</string>
 
-        <key>CFBundleInfoDictionaryVersion</key>
-        <string>6.0</string>
+    <key>CFBundleIdentifier</key>
+    <string>$(PRODUCT_BUNDLE_IDENTIFIER)</string>
 
-        <key>CFBundleName</key>
-        <string>taka_naqis</string>
+    <key>CFBundleInfoDictionaryVersion</key>
+    <string>6.0</string>
 
-        <key>CFBundlePackageType</key>
-        <string>APPL</string>
+    <key>CFBundleName</key>
+    <string>taka_naqis</string>
 
-        <key>CFBundleShortVersionString</key>
-        <string>$(FLUTTER_BUILD_NAME)</string>
+    <key>CFBundlePackageType</key>
+    <string>APPL</string>
 
-        <key>CFBundleSignature</key>
-        <string>????</string>
+    <key>CFBundleShortVersionString</key>
+    <string>$(FLUTTER_BUILD_NAME)</string>
 
-        <key>CFBundleVersion</key>
-        <string>$(FLUTTER_BUILD_NUMBER)</string>
+    <key>CFBundleSignature</key>
+    <string>????</string>
 
-        <key>LSRequiresIPhoneOS</key>
-        <true/>
+    <key>CFBundleVersion</key>
+    <string>$(FLUTTER_BUILD_NUMBER)</string>
 
-        <key>UILaunchStoryboardName</key>
-        <string>LaunchScreen</string>
+    <key>LSRequiresIPhoneOS</key>
+    <true/>
 
-        <key>UIMainStoryboardFile</key>
-        <string>Main</string>
+    <key>UILaunchStoryboardName</key>
+    <string>LaunchScreen</string>
 
-        <key>UISupportedInterfaceOrientations</key>
-        <array>
-            <string>UIInterfaceOrientationPortrait</string>
-            <string>UIInterfaceOrientationLandscapeLeft</string>
-            <string>UIInterfaceOrientationLandscapeRight</string>
-        </array>
+    <key>UIMainStoryboardFile</key>
+    <string>Main</string>
 
-        <array>
-            <string>UIInterfaceOrientationPortrait</string>
-            <string>UIInterfaceOrientationPortraitUpsideDown</string>
-            <string>UIInterfaceOrientationLandscapeLeft</string>
-            <string>UIInterfaceOrientationLandscapeRight</string>
-        </array>
+    <key>UISupportedInterfaceOrientations</key>
+    <array>
+        <string>UIInterfaceOrientationPortrait</string>
+        <string>UIInterfaceOrientationLandscapeLeft</string>
+        <string>UIInterfaceOrientationLandscapeRight</string>
+    </array>
 
-        <key>CADisableMinimumFrameDurationOnPhone</key>
-        <true/>
+    <key>CADisableMinimumFrameDurationOnPhone</key>
+    <true/>
 
-        <key>UIApplicationSupportsIndirectInputEvents</key>
-        <true/>
+    <key>UIApplicationSupportsIndirectInputEvents</key>
+    <true/>
 
-        <key>NSPhotoLibraryUsageDescription</key>
-        <string>يحتاج التطبيق الوصول إلى مكتبة الصور لاختيار الصور وإضافتها داخل التطبيق.</string>
+    <key>NSPhotoLibraryUsageDescription</key>
+    <string>يحتاج التطبيق الوصول إلى مكتبة الصور لاختيار الصور وإضافتها داخل التطبيق.</string>
 
-        <key>NSLocationWhenInUseUsageDescription</key>
-        <string>لن نستخدم موقعك. هذا الإذن مطلوب فقط لدعم مكتبات الإشعارات.</string>
+    <key>NSLocationWhenInUseUsageDescription</key>
+    <string>لن نستخدم موقعك. هذا الإذن مطلوب فقط لدعم مكتبات الإشعارات.</string>
 
-        <key>UIRequiresFullScreen</key>
-        <true/>
+    <key>UIRequiresFullScreen</key>
+    <true/>
 
-    </dict>
+</dict>
 </plist>
